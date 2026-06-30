@@ -321,7 +321,7 @@ h2 {
 .toast {
   position: fixed;
   left: 50%;
-  bottom: max(18px, env(safe-area-inset-bottom));
+  bottom: max(calc(max(18px, env(safe-area-inset-bottom)) + 82px), 35dvh);
   z-index: 20;
   width: max-content;
   max-width: calc(100vw - 38px);
