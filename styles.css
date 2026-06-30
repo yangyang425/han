@@ -257,30 +257,15 @@ h2 {
   background: #ffe8ef;
 }
 
-.confession-screen::before {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 78px;
-  z-index: 1;
-  height: 300px;
-  content: "";
-  background-image: url("assets/1.jpg");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-size: 100% auto;
-  pointer-events: none;
-}
-
 .confession-screen::after {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
   z-index: 2;
-  height: 190px;
+  height: 150px;
   content: "";
-  background: linear-gradient(180deg, rgba(255, 181, 193, 0), rgba(255, 143, 158, 0.92) 38%, rgba(255, 132, 150, 0.98));
+  background: linear-gradient(180deg, rgba(255, 181, 193, 0), rgba(255, 143, 158, 0.86) 46%, rgba(255, 132, 150, 0.98));
   pointer-events: none;
 }
 
@@ -411,13 +396,23 @@ h2 {
   .letter-card {
     gap: 10px;
     width: calc(100% - 48px);
-    margin-top: 3dvh;
-    padding: 22px 20px;
+    margin-top: clamp(64px, 10dvh, 78px);
+    padding: 18px 18px 20px;
+    border-radius: 24px;
+  }
+
+  .letter-card h2 {
+    font-size: 1.88rem;
+    line-height: 1.16;
   }
 
   .letter-card p {
-    font-size: 0.92rem;
-    line-height: 1.65;
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+
+  .confession-screen::after {
+    height: 132px;
   }
 }
 
