@@ -257,13 +257,28 @@ h2 {
   background: #ffe8ef;
 }
 
+.confession-screen::before {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 78px;
+  z-index: 1;
+  height: 300px;
+  content: "";
+  background-image: url("assets/1.jpg");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 100% auto;
+  pointer-events: none;
+}
+
 .confession-screen::after {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
-  height: 126px;
+  z-index: 2;
+  height: 190px;
   content: "";
   background: linear-gradient(180deg, rgba(255, 181, 193, 0), rgba(255, 143, 158, 0.92) 38%, rgba(255, 132, 150, 0.98));
   pointer-events: none;
@@ -276,12 +291,12 @@ h2 {
   height: 100%;
   object-fit: cover;
   object-position: 50% 0;
-  opacity: 0.98;
+  opacity: 0.86;
 }
 
 .letter-card {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: grid;
   gap: 14px;
   width: calc(100% - 56px);
@@ -305,7 +320,7 @@ h2 {
   left: 24px;
   right: 24px;
   bottom: max(14px, env(safe-area-inset-bottom));
-  z-index: 3;
+  z-index: 4;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
