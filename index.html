@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>给你的一封小信</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app" aria-live="polite">
+    <section class="screen cover-screen is-active" id="coverScreen" aria-labelledby="coverTitle">
+      <img class="cover-image" src="assets/封面.jpg" alt="">
+      <div class="cover-copy">
+        <div class="cover-text">
+          <p class="eyebrow">Momonga Love Letter</p>
+          <h1 id="coverTitle">有一封小小的信，想给你看。</h1>
+        </div>
+        <div class="unlock-card">
+          <div class="unlock-track" id="unlockTrack" role="slider" aria-label="滑动打开这份心意" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+            <span class="unlock-fill" id="unlockFill" aria-hidden="true"></span>
+            <span class="unlock-text">滑动打开这份心意</span>
+            <span class="unlock-handle" id="unlockHandle" aria-hidden="true">›</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen confession-screen" id="confessionScreen" aria-labelledby="confessionTitle">
+      <img class="paper-bg" src="assets/1.jpg" alt="">
+
+      <div class="letter-card">
+        <p class="eyebrow">For You</p>
+        <h2 id="confessionTitle">我喜欢你，想认真地告诉你。</h2>
+        <p>
+          不是突然想起，也不是随口一说。是每一次见到你、想到你、和你说话的时候，都觉得今天变得更可爱一点。
+        </p>
+        <p>
+          所以我想问你：愿不愿意和我一起，把普通日子过成只属于我们的偏心日常？
+        </p>
+      </div>
+
+      <div class="answer-panel">
+        <button class="main-button" id="yesButton" type="button">愿意</button>
+        <button class="soft-button" id="moreButton" type="button">再听一句</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
