@@ -7,14 +7,7 @@ const yesButton = document.querySelector("#yesButton");
 const moreButton = document.querySelector("#moreButton");
 const toast = document.querySelector("#toast");
 
-const extraLines = [
-  "你一出现，我就会偷偷开心好久。",
-  "以后想把每个普通瞬间，都分你一半。",
-  "这封信很短，但喜欢你这件事很认真。"
-];
-
 let toastTimer;
-let lineIndex = 0;
 let dragState = null;
 let unlocked = false;
 
@@ -125,6 +118,5 @@ yesButton.addEventListener("click", (event) => {
 });
 
 moreButton.addEventListener("click", () => {
-  showToast(extraLines[lineIndex % extraLines.length]);
-  lineIndex += 1;
+  showToast("不允许！");
 });
